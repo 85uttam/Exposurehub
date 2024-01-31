@@ -1,0 +1,8 @@
+2024-01-30 17:01:800 INFO  BaseClass:69 - chrome : is launched successfully
+2024-01-30 17:01:557 INFO  BaseClass:89 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-01-30 17:01:755 INFO  BaseClass:96 - login test is Started
+2024-01-30 17:01:566 INFO  LoginPage:102 - Enter Username : user.quick
+2024-01-30 17:01:873 INFO  LoginPage:107 - Enter Password : Ebix@123
+2024-01-30 17:01:116 INFO  LoginPage:111 - Clicked on Login
+2024-01-30 17:01:524 INFO  BaseClass:110 - login test is pass
+2024-01-30 17:01:527 INFO  BaseClass:117 - login - is Finished.

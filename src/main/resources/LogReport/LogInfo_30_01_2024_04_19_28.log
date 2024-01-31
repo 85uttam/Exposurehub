@@ -1,0 +1,67 @@
+2024-01-30 16:01:26 INFO  BaseClass:69 - chrome : is launched successfully
+2024-01-30 16:01:782 INFO  BaseClass:89 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-01-30 16:01:482 INFO  BaseClass:96 - login test is Started
+2024-01-30 16:01:97 INFO  LoginPage:102 - Enter Username : pankaj.yadav
+2024-01-30 16:01:388 INFO  LoginPage:107 - Enter Password : Ebix@123
+2024-01-30 16:01:610 INFO  LoginPage:111 - Clicked on Login
+2024-01-30 16:01:137 INFO  BaseClass:110 - login test is pass
+2024-01-30 16:01:142 INFO  BaseClass:117 - login - is Finished.
+2024-01-30 16:01:485 INFO  BaseClass:96 - createNewPolicy test is Started
+2024-01-30 16:01:962 INFO  CommonLocatorsAndMethod:482 - Clicked on Policy
+2024-01-30 16:01:787 INFO  CommonLocatorsAndMethod:488 - Clicked on Add Policy
+2024-01-30 16:01:840 INFO  CommonLocatorsAndMethod:498 - Clicked on Entity Grid
+2024-01-30 16:01:387 INFO  CommonLocatorsAndMethod:504 - Select Entity
+2024-01-30 16:01:41 INFO  CommonLocatorsAndMethod:509 - Clicked on Class Grid
+2024-01-30 16:01:898 INFO  CommonLocatorsAndMethod:521 - Select Class - [[ChromeDriver: chrome on windows (bf2f2f9e449549a50b34332b7da85642)] -> xpath: //span[text()=' Offshore Renewables ']]
+2024-01-30 16:01:921 INFO  CommonLocatorsAndMethod:530 - Clicked on Perils Grid
+2024-01-30 16:01:581 INFO  CommonLocatorsAndMethod:537 - Enter Policy Reference : Policy_30012024_S07
+2024-01-30 16:01:545 INFO  CommonLocatorsAndMethod:544 - Enter Assured : Assured_S07
+2024-01-30 16:01:708 INFO  CommonLocatorsAndMethod:547 - Scroll till other field text
+2024-01-30 16:01:463 INFO  CommonLocatorsAndMethod:553 - Clicked on Other Field
+2024-01-30 16:01:107 INFO  CommonLocatorsAndMethod:559 - Clicked on Coverage Rule
+2024-01-30 16:01:201 INFO  CommonLocatorsAndMethod:566 - Clicked on Save
+2024-01-30 16:01:881 INFO  CommonLocatorsAndMethod:570 - Clicked on Policy Navigation Link
+2024-01-30 16:01:251 INFO  CommonLocatorsAndMethod:576 - Verify created Policy
+2024-01-30 16:01:261 INFO  BaseClass:110 - createNewPolicy test is pass
+2024-01-30 16:01:265 INFO  BaseClass:117 - createNewPolicy - is Finished.
+2024-01-30 16:01:352 INFO  BaseClass:96 - addNewLimitGroup test is Started
+2024-01-30 16:01:717 INFO  CommonLocatorsAndMethod:723 - Clicked on Terms Navigation
+2024-01-30 16:01:141 INFO  CommonLocatorsAndMethod:728 - Clicked on Terms Edit
+2024-01-30 16:01:952 INFO  CommonLocatorsAndMethod:733 - Clicked on Add Limit Group
+2024-01-30 16:01:378 INFO  CommonLocatorsAndMethod:739 - Enter Limit Group Name : GNPolicyS07
+2024-01-30 16:01:680 INFO  CommonLocatorsAndMethod:744 - Clicked on Add Rule Limit Group
+2024-01-30 16:01:955 INFO  CommonLocatorsAndMethod:750 - Clicked on Country Name
+2024-01-30 16:01:672 INFO  CommonLocatorsAndMethod:753 - Enter Country Name : United States
+2024-01-30 16:01:202 INFO  CommonLocatorsAndMethod:758 - Clicked on Preview Group
+2024-01-30 16:01:627 INFO  CommonLocatorsAndMethod:763 - Clicked on Save Group
+2024-01-30 16:01:15 INFO  CommonLocatorsAndMethod:768 - Clicked on Save Terms
+2024-01-30 16:01:47 INFO  CommonLocatorsAndMethod:778 - Verify created Group Name
+2024-01-30 16:01:59 INFO  BaseClass:110 - addNewLimitGroup test is pass
+2024-01-30 16:01:60 INFO  BaseClass:117 - addNewLimitGroup - is Finished.
+2024-01-30 16:01:138 INFO  BaseClass:96 - addNewLimit test is Started
+2024-01-30 16:01:545 INFO  CommonLocatorsAndMethod:861 - Clicked on Edit Terms
+2024-01-30 16:01:38 INFO  CommonLocatorsAndMethod:868 - Clicked on Add New Limit
+2024-01-30 16:01:815 INFO  CommonLocatorsAndMethod:879 - Clicked on Save Terms
+2024-01-30 16:01:735 INFO  BaseClass:110 - addNewLimit test is pass
+2024-01-30 16:01:743 INFO  BaseClass:117 - addNewLimit - is Finished.
+2024-01-30 16:01:778 INFO  BaseClass:96 - addCoverage test is Started
+2024-01-30 16:01:438 INFO  CommonLocatorsAndMethod:894 - Clicked on Coverage Navigation
+2024-01-30 16:01:577 INFO  CommonLocatorsAndMethod:901 - Clicked on Coverage Edit
+2024-01-30 16:01:429 INFO  CommonLocatorsAndMethod:906 - Clicked on Add Coverage Group
+2024-01-30 16:01:894 INFO  CommonLocatorsAndMethod:912 - Enter Coverage Name : CoverageS07
+2024-01-30 16:01:190 INFO  CommonLocatorsAndMethod:919 - Clicked on Add Rule Coverage
+2024-01-30 16:01:626 INFO  CommonLocatorsAndMethod:925 - Clicked on Country Name
+2024-01-30 16:01:431 INFO  CommonLocatorsAndMethod:928 - Enter Country Name : United States
+2024-01-30 16:01:807 INFO  CommonLocatorsAndMethod:934 - Clicked on Preview Group
+2024-01-30 16:01:248 INFO  CommonLocatorsAndMethod:940 - Clicked on Save Coverage
+2024-01-30 16:01:795 INFO  CommonLocatorsAndMethod:948 - Clicked on Cancel Coverage
+2024-01-30 16:01:06 INFO  CommonLocatorsAndMethod:957 - Verify created Coverage Name
+2024-01-30 16:01:116 INFO  BaseClass:110 - addCoverage test is pass
+2024-01-30 16:01:117 INFO  BaseClass:117 - addCoverage - is Finished.
+2024-01-30 16:01:251 INFO  BaseClass:96 - importOffshoreSchedule test is Started
+2024-01-30 16:01:759 INFO  CommonLocatorsAndMethod:2618 - Clicked on Class Navigation
+2024-01-30 16:01:449 INFO  CommonLocatorsAndMethod:2628 - Clicked on Edit Schedule
+2024-01-30 16:01:24 INFO  CommonLocatorsAndMethod:2641 - Clicked on Import Button
+2024-01-30 16:01:607 INFO  CommonLocatorsAndMethod:2644 - File Uploaded : \src\test\resources\importData\Onshore_100_Rows.xls
+2024-01-30 16:01:934 INFO  CommonLocatorsAndMethod:2678 - Clicked on Continue
+2024-01-30 16:01:705 INFO  CommonLocatorsAndMethod:2684 - Clicked on Import
