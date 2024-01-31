@@ -23,5 +23,10 @@ public class S08quickQuotePageTest extends BaseClass{
 	public void login() {
 		S08page.login();
 	}
+	
+	@Test(priority = 2, enabled = true, groups = { "Smoke", "Sanity", "Regression" })
+	public void quickQuote() {
+		S08page.quickQuote();
+	}
 
 }

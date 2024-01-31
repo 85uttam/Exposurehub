@@ -3785,6 +3785,11 @@ public class CommonLocatorsAndMethod {
 
 	public void quickQuote() {
 		try {
+			eleUtil.waitForElementVisibleAndToBeClickable(HomePage_PolicyLinkButton, AppConstants.DEFAULT_LONG_TIME_OUT);
+			jsUtil.clickElementByJS(HomePage_PolicyLinkButton);
+			log.info("Click on Policy From Home Page");
+			Thread.sleep(5000);
+			
 			eleUtil.waitForElementVisibleAndToBeClickable(quickQuotePlus_Button, AppConstants.DEFAULT_LONG_TIME_OUT);
 			jsUtil.clickElementByJS(quickQuotePlus_Button);
 			log.info("Clicked on Quick Quote Button");
@@ -3799,9 +3804,20 @@ public class CommonLocatorsAndMethod {
 			Thread.sleep(8000);
 			log.info("Enter County Data : "+"");
 			
+			eleUtil.waitForElementVisibleAndToBeClickable(addSingleScheduleData, AppConstants.DEFAULT_LONG_TIME_OUT);
+			eleUtil.waitForElementToBeClickable(AppConstants.DEFAULT_LONG_TIME_OUT, addSingleScheduleData);
+
+			jsUtil.clickElementByJS(addSingleScheduleData);
+			log.info("Select Schedule Dataa");
 			
+//			eleUtil.waitForElementVisibleAndToBeClickable(runButton, AppConstants.DEFAULT_LONG_TIME_OUT);
+//			jsUtil.clickElementByJS(runButton);
+//			log.info("Clicked on Run");
 			
-			driver.findElement(By.xpath(""));			
+//			eleUtil.waitForElementVisibleAndToBeClickable(close, AppConstants.DEFAULT_LONG_TIME_OUT);
+//			jsUtil.clickElementByJS(runButton);
+//			log.info("Clicked on Run");
+			
 		} catch (Exception e) {
 			System.out.println("Issue in Common.quickQuote "+e);
 		}
