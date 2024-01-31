@@ -3797,7 +3797,7 @@ public class CommonLocatorsAndMethod {
 			countyInputGrid.clear();
 			countyInputGrid.sendKeys("bethel");
 			Thread.sleep(8000);
-			log.info("Enter County Data : "+"done");
+			log.info("Enter County Data : "+"");
 			
 			
 			
