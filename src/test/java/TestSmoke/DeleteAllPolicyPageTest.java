@@ -1,4 +1,4 @@
-package Test;
+package TestSmoke;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -24,18 +24,16 @@ public class DeleteAllPolicyPageTest extends BaseClass {
 
 	@Test(priority = 2, enabled = true)
 	public void policySeach() {
-		common.searchPolicyAndOpen(AppConstants.policy_Number + "01");
+		common.searchPolicyAndOpen(AppConstants.policy_Number + "S06");
 	}
 
 	@Test(priority = 3, enabled = true)
 	public void searchAndDeletePolicy() {
 		String policyNumber = null;
-		for (int i = 1; i <= 36; i++) {
-			if (i <= 9) {
-				policyNumber = AppConstants.policy_Number + "0" + i;
-			} else {
-				policyNumber = AppConstants.policy_Number + i;
-			}
+		for (int i = 6; i <=7; i++) {
+			if (i <= 7) {
+				policyNumber = AppConstants.policy_Number + "S0" + i;
+			} 
 			common.deletePolicyFromPolicyPage(policyNumber);
 		}
 	}

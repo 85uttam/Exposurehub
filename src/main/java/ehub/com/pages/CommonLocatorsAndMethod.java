@@ -373,6 +373,9 @@ public class CommonLocatorsAndMethod {
 	@FindBy(xpath = "(//div[@ref='eLabel']/span[text()='County'])[2]/../../../../../div[@class='ag-header-row ag-header-row-column-filter']/div[@aria-colindex='6']/div[@ref='eFloatingFilterBody']/app-customfloatinglocationpoup/div/div/mat-form-field/div/div/div/input")
 	public WebElement countyInputGrid;
 	
+	@FindBy(xpath = "(//div[contains(.,'NoGeocoding')])[13]/mat-select")
+	public WebElement ClickOnGeocoding;
+	
 	public void login(String userName, String password) {
 		loginPage.doLogin(userName, password);
 	}
@@ -383,13 +386,11 @@ public class CommonLocatorsAndMethod {
 		try {
 			HomePage_PolicyLinkButton.click();
 			log.info("Clicked on Policy");
-			// Thread.sleep(5000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(PolicyPlus_Button, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
 			PolicyPlus_Button.click();
 			log.info("Clicked on Add Policy");
-			// Thread.sleep(5000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
@@ -399,15 +400,13 @@ public class CommonLocatorsAndMethod {
 
 			ClickOn_Entity.click();
 			log.info("Clicked on Entity Grid");
-			// Thread.sleep(2000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(SelectEntity, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
 			SelectEntity.click();
 			log.info("Select Entity");
-			// Thread.sleep(2000);
-			eleUtil.waitForElementVisibleAndToBeClickable(classField, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
+			eleUtil.waitForElementVisibleAndToBeClickable(classField, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 			classField.click();
 			log.info("Clicked on Class Grid");
 			Thread.sleep(3000);
@@ -416,7 +415,7 @@ public class CommonLocatorsAndMethod {
 				String className[] = classNameWithCommaSeprated.split(",");
 				WebElement classNameValue = driver
 						.findElement(By.xpath("//span[text()='" + " " + className[i] + " " + "']"));
-				// Thread.sleep(1000);
+
 				eleUtil.waitForElementVisibleAndToBeClickable(classNameValue, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
 				jsUtil.clickElementByJS(classNameValue);
@@ -425,11 +424,11 @@ public class CommonLocatorsAndMethod {
 			}
 
 			eleUtil.clickTab();
-			// Thread.sleep(3000);
+
 			eleUtil.waitForElementVisibleAndToBeClickable(PerilsField, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
 			jsUtil.clickElementByJS(PerilsField);
-			// Thread.sleep(1000);
+
 			log.info("Clicked on Perils Grid");
 
 			eleUtil.clickTab();
@@ -439,8 +438,6 @@ public class CommonLocatorsAndMethod {
 			policyReference.sendKeys(policyReferenceData);
 			log.info("Enter Policy Reference : " + policyReferenceData);
 
-			// Thread.sleep(3000);
-
 			eleUtil.waitForElementVisibleAndToBeClickable(EnterAssured, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
 			EnterAssured.sendKeys(policyAssuredData);
@@ -448,7 +445,6 @@ public class CommonLocatorsAndMethod {
 
 			jsUtil.scrollIntoViewTrue(other_Field_text);
 			log.info("Scroll till other field text");
-			// Thread.sleep(5000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(other_Field_text, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
@@ -457,19 +453,15 @@ public class CommonLocatorsAndMethod {
 			Thread.sleep(1000);
 
 			jsUtil.scrollIntoViewTrue(PolicySave);
-			// Thread.sleep(2000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(PolicySave, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
-
 			PolicySave.click();
 			log.info("Clicked on Save");
-			// Thread.sleep(4000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
 			PolicyNavigationImage.click();
 			log.info("Clicked on Policy Navigation Link");
-			// Thread.sleep(5000);
 
 			eleUtil.waitForElementVisible(verifyCreatedPolicy, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 
@@ -784,7 +776,7 @@ public class CommonLocatorsAndMethod {
 //			actualGroupName = actualGroupNameElement.getText();
 //			log.info("Verify created Group Name");
 			Thread.sleep(1000);
-			actualGroupName=eleUtil.retryWebElementGetText(actualGroupNameElement, 15);
+			actualGroupName=eleUtil.retryWebElementGetText(actualGroupNameElement, 30);
 			log.info("Verify created Group Name");
 			Thread.sleep(1000);
 
@@ -1423,22 +1415,25 @@ public class CommonLocatorsAndMethod {
 	public String seachReportAfterLogin(String reportSearchData) {
 		String verifySearchedReport = null;
 		try {
-
+			eleUtil.waitForElementVisibleAndToBeClickable(HomePage_ReportLinkButton, AppConstants.DEFAULT_LONG_TIME_OUT);
 			HomePage_ReportLinkButton.click();
 			log.info("Clicked on Report Link from Home Page");
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
+			
+			eleUtil.waitForElementVisibleAndToBeClickable(hubNavigation, AppConstants.DEFAULT_LONG_TIME_OUT);
+			jsUtil.clickElementByJS(hubNavigation);
+			//Thread.sleep(2000);
 
-			hubNavigation.click();
-			Thread.sleep(2000);
-
-			searchReportInputBox.click();
+			eleUtil.waitForElementVisibleAndToBeClickable(searchReportInputBox, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
+			jsUtil.clickElementByJS(searchReportInputBox);
 			log.info("Clicked on Search Input Box");
 			Thread.sleep(500);
 			searchReportInputBox.clear();
 
 			searchReportInputBox.sendKeys(reportSearchData);
 			Thread.sleep(4000);
-
+			
+			eleUtil.waitForElementVisible(searchedReportData, AppConstants.DEFAULT_LONG_TIME_OUT);
 			verifySearchedReport = searchedReportData.getText();
 			Thread.sleep(1000);
 
@@ -1572,8 +1567,10 @@ public class CommonLocatorsAndMethod {
 		String verifySearchedReport = null;
 		try {
 			verifySearchedReport = seachReportAfterLogin(reportSearchData);
+			eleUtil.waitForElementVisibleAndToBeClickable(searchedReportData, AppConstants.DEFAULT_LONG_TIME_OUT);
 			searchedReportData.click();
 			Thread.sleep(4000);
+			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_LONG_TIME_OUT);
 			PolicyNavigationImage.click();
 			Thread.sleep(1000);
 
@@ -2327,7 +2324,7 @@ public class CommonLocatorsAndMethod {
 
 			// confirmationYes.click();
 			Thread.sleep(1000);
-
+			eleUtil.waitForElementToBeClickable(AppConstants.DEFAULT_MEDIUM_TIME_OUT, saveTerms);
 			int sizeAfter = rowSize.size();
 			if (sizeAfter > sizeBefore) {
 				copyLimitvalidationMessageVerify = copyLimitvalidationMessage;
@@ -2337,7 +2334,7 @@ public class CommonLocatorsAndMethod {
 			Thread.sleep(1000);
 
 			eleUtil.waitForElementVisibleAndToBeClickable(saveTerms, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
-			saveTerms.click();
+			jsUtil.clickElementByJS(saveTerms);
 			log.info("Clicked on Save Terms");
 			Thread.sleep(5000);
 
@@ -2657,10 +2654,9 @@ public class CommonLocatorsAndMethod {
 			// geocoding ON
 			if (geocodingClikableYesorNo.toLowerCase().trim().equals("yes")) {
 
-				WebElement ClickOnGeocoding = driver
-						.findElement(By.xpath("(//div[contains(.,'NoGeocoding')])[13]/mat-select"));
-				eleUtil.waitForElementVisibleAndToBeClickable(ClickOnGeocoding, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
-				ClickOnGeocoding.click();
+				eleUtil.waitForElementVisibleAndToBeClickable(ClickOnGeocoding, AppConstants.DEFAULT_LONG_TIME_OUT);
+			
+				jsUtil.clickElementByJS(ClickOnGeocoding);
 				log.info("Clicked on Geocoding");
 				Thread.sleep(5000);
 
@@ -2669,7 +2665,7 @@ public class CommonLocatorsAndMethod {
 							.findElement(By.xpath("//span[@class='mat-option-text'][contains(.,'Yes')]"));
 					eleUtil.waitForElementVisibleAndToBeClickable(SelectGeocodingYes,
 							AppConstants.DEFAULT_MEDIUM_TIME_OUT);
-					SelectGeocodingYes.click();
+					jsUtil.clickElementByJS(SelectGeocodingYes);
 					log.info("Select Geocoding - Yes");
 				} else {
 					WebElement SelectGeocodingNo = driver

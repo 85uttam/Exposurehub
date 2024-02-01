@@ -42,17 +42,16 @@ public class BaseClass {
 	public static Excelutility excUtil = new Excelutility(System.getProperty("user.dir") + PropertyUtility.getProperty("pathofExcelTestData"));
 	
 	
-	@BeforeSuite(groups = {"Smoke", "Sanity", "Regression"})
+	@BeforeSuite
 	public void beforeSuite() {
 		extent = ExtentManager.getInstance();
 		TestUtility.setdateForLog4j();
 	}
 
-	@BeforeTest(groups = {"Smoke", "Sanity", "Regression"})
+	@BeforeTest
 	public void beforeTest() {
 		test = extent.createTest(getClass().getName());
 	}
-	
 	
 	public void initilization() {
 
@@ -91,13 +90,13 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
-	@BeforeMethod(groups = {"Smoke", "Sanity", "Regression"})
+	@BeforeMethod
 	public void beforeMethod(ITestResult result){		
 			log.info(result.getMethod().getMethodName() + " test is Started");
 			test.log(Status.INFO, result.getMethod().getMethodName() + " test is Started");			
 	}
 	
-	@AfterMethod(groups = {"Smoke", "Sanity", "Regression"})
+	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			log.info(result.getName() + " test is Failed" + result.getThrowable());
@@ -141,7 +140,7 @@ public class BaseClass {
 		return destFile.toString();
 	}
 
-	@AfterClass(groups = {"Smoke", "Sanity", "Regression"})
+	@AfterClass
 	public void tearDown() {
 		try {
 			Thread.sleep(1000);

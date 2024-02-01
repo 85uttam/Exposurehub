@@ -97,16 +97,19 @@ public class LoginPage {
 	}
 	public void doLogin(String loginUsername, String loginPassword) {
 		try {
+			eleUtil.waitForElementVisibleAndToBeClickable(username, AppConstants.DEFAULT_LONG_TIME_OUT);
 			username.clear();
 			username.sendKeys(loginUsername);
 			log.info("Enter Username : "+loginUsername);
 			BaseClass.logExtentReport("Enter Username : "+loginUsername);
 			
+			eleUtil.waitForElementVisibleAndToBeClickable(password, AppConstants.DEFAULT_LONG_TIME_OUT);
 			password.clear();
 			password.sendKeys(loginPassword);
 			log.info("Enter Password : "+loginPassword);
 			BaseClass.logExtentReport("Enter Password : "+loginPassword);
 			
+			eleUtil.waitForElementToBeClickable(AppConstants.DEFAULT_SHORT_TIME_OUT, login);
 			login.click();
 			log.info("Clicked on Login");
 			BaseClass.logExtentReport("Clicked on Login");
