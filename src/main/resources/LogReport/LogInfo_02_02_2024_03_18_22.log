@@ -1,0 +1,33 @@
+2024-02-02 15:02:980 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:371 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:738 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:63 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:937 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:246 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:742 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:262 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:85 INFO  BaseClass:95 - verifyLoginURL test is Started
+2024-02-02 15:02:124 INFO  LoginPage:63 - Verify URL
+2024-02-02 15:02:228 INFO  BaseClass:95 - login test is Started
+2024-02-02 15:02:330 INFO  BaseClass:95 - login test is Started
+2024-02-02 15:02:365 INFO  BaseClass:95 - login test is Started
+2024-02-02 15:02:554 INFO  BaseClass:109 - verifyLoginURL test is pass
+2024-02-02 15:02:557 INFO  BaseClass:116 - verifyLoginURL - is Finished.
+2024-02-02 15:02:288 INFO  BaseClass:95 - verifyLoginPageTitle test is Started
+2024-02-02 15:02:299 INFO  LoginPage:68 - Verify login page Title
+2024-02-02 15:02:524 INFO  BaseClass:109 - verifyLoginPageTitle test is pass
+2024-02-02 15:02:525 INFO  BaseClass:116 - verifyLoginPageTitle - is Finished.
+2024-02-02 15:02:558 INFO  BaseClass:95 - verifyLogoImage test is Started
+2024-02-02 15:02:561 INFO  LoginPage:73 - Verify Logo
+2024-02-02 15:02:724 INFO  LoginPage:103 - Enter Username : pankaj.yadav
+2024-02-02 15:02:880 INFO  LoginPage:103 - Enter Username : pankaj.yadav
+2024-02-02 15:02:15 INFO  LoginPage:103 - Enter Username : pankaj.yadav
+2024-02-02 15:02:661 INFO  LoginPage:109 - Enter Password : Ebix@123
+2024-02-02 15:02:749 INFO  LoginPage:109 - Enter Password : Ebix@123
+2024-02-02 15:02:864 INFO  LoginPage:109 - Enter Password : Ebix@123
+2024-02-02 15:02:214 INFO  LoginPage:114 - Clicked on Login
+2024-02-02 15:02:281 INFO  LoginPage:114 - Clicked on Login
+2024-02-02 15:02:348 INFO  LoginPage:114 - Clicked on Login
+2024-02-02 15:02:676 INFO  BaseClass:109 - login test is pass
+2024-02-02 15:02:677 INFO  BaseClass:116 - login - is Finished.
+2024-02-02 15:02:770 INFO  BaseClass:95 - createNewPolicy test is Started

@@ -3,12 +3,6 @@
 
 <suite name="Exposure Hub Regression" verbose="4">
 	
-	<groups>
-		<run>
-			<include name="Regression"></include>
-		</run>
-	</groups>
-	
 	<listeners>
 		<listener
 			class-name="ehub.com.listeners.ExtentReportListener" />

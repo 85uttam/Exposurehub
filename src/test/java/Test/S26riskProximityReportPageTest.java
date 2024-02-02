@@ -13,18 +13,18 @@ public class S26riskProximityReportPageTest extends BaseClass{
 	
 	S26riskProximityReportPage S26page;
 
-	@BeforeTest(groups = { "Smoke", "Sanity", "Regression" })
+	@BeforeTest
 	public void setupBrowser() {
 		initilization();
 		S26page = new S26riskProximityReportPage(driver);
 	}
 
-	@Test(priority = 1, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 1, enabled = true)
 	public void login() {
 		S26page.login();
 	}
 	
-	@Test(priority = 2, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 2, enabled = true)
 	public void riskProximityReport() {
 		String expected=AppConstants.report_Name+"26";
 		String actual=S26page.riskProximityReport(expected);

@@ -13,30 +13,30 @@ public class S29editReportRunAndDeletePageTest extends BaseClass{
 	
 	S29editReportRunAndDeletePage S29page;
 
-	@BeforeTest(groups = { "Smoke", "Sanity", "Regression" })
+	@BeforeTest
 	public void setupBrowser() {
 		initilization();
 		S29page = new S29editReportRunAndDeletePage(driver);
 	}
 
-	@Test(priority = 1, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 1, enabled = true)
 	public void login() {
 		S29page.login();
 	}
 	
-	@Test(priority = 2, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 2, enabled = true)
 	public void createNewReport() {
 		String expected=AppConstants.report_Name+"29";
 		String actual=S29page.createNewReport(expected);
 		Assert.assertEquals(actual, expected);
 	}
 	
-	@Test(priority = 3, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 3, enabled = true)
 	public void editReport() {
 		S29page.editReport();
 	}	
 	
-	@Test(priority = 4, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 4, enabled = true)
 	public void deleteReport() {
 		S29page.deleteReport();
 	}

@@ -12,24 +12,24 @@ public class S20createNewOnshorePolicyWithoutSavingWarningMessageVisibleThenSave
 	
 	S20createNewOnshorePolicyWithoutSavingWarningMessageVisibleThenSavePage S20page;
 
-	@BeforeTest(groups = { "Smoke", "Sanity", "Regression" })
+	@BeforeTest
 	public void setupBrowser() {
 		initilization();
 		S20page = new S20createNewOnshorePolicyWithoutSavingWarningMessageVisibleThenSavePage(driver);
 	}
 
-	@Test(priority = 1, enabled = true, groups = {"Sanity", "Regression" })
+	@Test(priority = 1, enabled = true)
 	public void login() {
 		S20page.login();
 	}
 	
-	@Test(priority = 2, enabled = true, groups = {"Sanity", "Regression" })
+	@Test(priority = 2, enabled = true)
 	public void createNewPolicyWithoutSavingWarningMessage() {
 		String expectedPolicyNumber=AppConstants.policy_Number+"20";
 		S20page.createNewPolicyWithoutSavingWarningMessage(expectedPolicyNumber);
 	}
 	
-	@Test(priority = 3, enabled = true, groups = {"Sanity", "Regression" })
+	@Test(priority = 3, enabled = true)
 	public void verifyCreatedPolicy() {
 		String expectedPolicyNumber=AppConstants.policy_Number+"20";
 		String actual=S20page.verifyCreatedPolicy(expectedPolicyNumber);

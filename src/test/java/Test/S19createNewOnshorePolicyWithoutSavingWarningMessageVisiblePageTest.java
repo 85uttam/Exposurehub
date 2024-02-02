@@ -12,18 +12,18 @@ public class S19createNewOnshorePolicyWithoutSavingWarningMessageVisiblePageTest
 	
 	S19createNewOnshorePolicyWithoutSavingWarningMessageVisiblePage S19page;
 
-	@BeforeTest(groups = { "Smoke", "Sanity", "Regression" })
+	@BeforeTest
 	public void setupBrowser() {
 		initilization();
 		S19page = new S19createNewOnshorePolicyWithoutSavingWarningMessageVisiblePage(driver);
 	}
 
-	@Test(priority = 1, enabled = true, groups = {"Sanity", "Regression" })
+	@Test(priority = 1, enabled = true)
 	public void login() {
 		S19page.login();
 	}
 	
-	@Test(priority = 2, enabled = true, groups = {"Sanity", "Regression" })
+	@Test(priority = 2, enabled = true)
 	public void createNewPolicyWithoutSavingWarningMessage() {
 		String expectedPolicyNumber=AppConstants.policy_Number+"19";
 		S19page.createNewPolicyWithoutSavingWarningMessage(expectedPolicyNumber);		

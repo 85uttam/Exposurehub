@@ -13,18 +13,18 @@ public class S28createandRunOffshoreOrOnshoreAggregateReportPageTest extends Bas
 	
 	S28createandRunOffshoreOrOnshoreAggregateReportPage S28page;
 
-	@BeforeTest(groups = { "Smoke", "Sanity", "Regression" })
+	@BeforeTest
 	public void setupBrowser() {
 		initilization();
 		S28page = new S28createandRunOffshoreOrOnshoreAggregateReportPage(driver);
 	}
 
-	@Test(priority = 1, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 1, enabled = true)
 	public void login() {
 		S28page.login();
 	}
 	
-	@Test(priority = 2, enabled = true, groups = {"Smoke", "Sanity", "Regression" })
+	@Test(priority = 2, enabled = true)
 	public void createAndRunAggregateReport() {
 		String expected=AppConstants.report_Name+"28";
 		String actual=S28page.createAndRunAggregateReport(expected);

@@ -1,0 +1,27 @@
+2024-02-02 15:02:558 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:88 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:185 INFO  BaseClass:68 - chrome : is launched successfully
+2024-02-02 15:02:05 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:377 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:664 INFO  BaseClass:88 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-02 15:02:132 INFO  BaseClass:95 - verifyLoginURL test is Started
+2024-02-02 15:02:332 INFO  BaseClass:95 - login test is Started
+2024-02-02 15:02:334 INFO  LoginPage:63 - Verify URL
+2024-02-02 15:02:840 INFO  BaseClass:95 - login test is Started
+2024-02-02 15:02:927 INFO  BaseClass:109 - verifyLoginURL test is pass
+2024-02-02 15:02:933 INFO  BaseClass:116 - verifyLoginURL - is Finished.
+2024-02-02 15:02:268 INFO  BaseClass:95 - verifyLoginPageTitle test is Started
+2024-02-02 15:02:279 INFO  LoginPage:68 - Verify login page Title
+2024-02-02 15:02:368 INFO  BaseClass:109 - verifyLoginPageTitle test is pass
+2024-02-02 15:02:374 INFO  BaseClass:116 - verifyLoginPageTitle - is Finished.
+2024-02-02 15:02:397 INFO  BaseClass:95 - verifyLogoImage test is Started
+2024-02-02 15:02:411 INFO  LoginPage:73 - Verify Logo
+2024-02-02 15:02:880 INFO  LoginPage:103 - Enter Username : pankaj.yadav
+2024-02-02 15:02:992 INFO  LoginPage:103 - Enter Username : pankaj.yadav
+2024-02-02 15:02:640 INFO  LoginPage:109 - Enter Password : Ebix@123
+2024-02-02 15:02:749 INFO  LoginPage:109 - Enter Password : Ebix@123
+2024-02-02 15:02:53 INFO  LoginPage:114 - Clicked on Login
+2024-02-02 15:02:119 INFO  LoginPage:114 - Clicked on Login
+2024-02-02 15:02:741 INFO  BaseClass:109 - login test is pass
+2024-02-02 15:02:741 INFO  BaseClass:116 - login - is Finished.
+2024-02-02 15:02:957 INFO  BaseClass:95 - createNewPolicy test is Started
