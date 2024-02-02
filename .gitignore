@@ -3,6 +3,7 @@ screenshot/
 test-output/
 build/
 reports/
+ScreenShots/
 
 application.log
 ##############################
