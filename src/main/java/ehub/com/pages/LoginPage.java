@@ -114,7 +114,7 @@ public class LoginPage {
 			log.info("Clicked on Login");
 			BaseClass.logExtentReport("Clicked on Login");
 			
-			eleUtil.waitForElementVisibleAndToBeClickable(HomePage_PolicyLinkButton, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
+			eleUtil.waitForElementVisibleAndToBeClickable(HomePage_PolicyLinkButton, AppConstants.DEFAULT_LONG_TIME_OUT);
 			
 		} catch (Exception e) {
 			System.out.println("Issue in LoginPage.doLogin "+e);

@@ -770,11 +770,14 @@ public class CommonLocatorsAndMethod {
 			log.info("Clicked on Save Terms");
 			
 			eleUtil.waitForElementVisibleAndToBeClickable(TermsNavigationImage, AppConstants.DEFAULT_LONG_TIME_OUT);
+			driver.navigate().refresh();
+			eleUtil.waitForElementVisibleAndToBeClickable(TermsNavigationImage, AppConstants.DEFAULT_LONG_TIME_OUT);
+			jsUtil.clickElementByJS(TermsNavigationImage);
+			
 			eleUtil.waitForElementPresenceWithFluentWait(AppConstants.DEFAULT_LONG_TIME_OUT, 2,
 					actualGroupNameElement);
 			eleUtil.waitForElementVisible(actualGroupNameElement, AppConstants.DEFAULT_LONG_TIME_OUT);
-//			actualGroupName = actualGroupNameElement.getText();
-//			log.info("Verify created Group Name");
+
 			Thread.sleep(1000);
 			actualGroupName=eleUtil.retryWebElementGetText(actualGroupNameElement, 30);
 			log.info("Verify created Group Name");
@@ -1514,20 +1517,26 @@ public class CommonLocatorsAndMethod {
 
 	public void addClassWithoutSearchedPolicyData(WebElement ele) {
 		try {
-			PolicyNavigationImage.click();
+			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
+			jsUtil.clickElementByJS(PolicyNavigationImage);
+			log.info("Clicked on Plicy Navigation");
 			Thread.sleep(1000);
 
 			jsUtil.scrollIntoViewTrue(editPolicy);
 			Thread.sleep(1000);
-			editPolicy.click();
+			eleUtil.waitForElementVisibleAndToBeClickable(editPolicy, AppConstants.DEFAULT_SHORT_TIME_OUT);
+			jsUtil.clickElementByJS(editPolicy);
+			log.info("Clicked on Edit Policy");
 
-			PolicyNavigationImage.click();
-			Thread.sleep(1000);
-
-			classField.click();
-			Thread.sleep(1000);
+			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
+			jsUtil.clickElementByJS(PolicyNavigationImage);
+			
+			eleUtil.waitForElementVisibleAndToBeClickable(classField, AppConstants.DEFAULT_SHORT_TIME_OUT);
+			jsUtil.clickElementByJS(classField);
+			log.info("Clicked on Class Grid");
 
 			ele.click();
+			log.info("Select Class");
 			Thread.sleep(1000);
 
 			eleUtil.clickTab();
@@ -1535,10 +1544,15 @@ public class CommonLocatorsAndMethod {
 
 			jsUtil.scrollIntoViewTrue(savePolicy);
 			Thread.sleep(1000);
-			savePolicy.click();
+			log.info("Scroll to - Save Button");
+			
+			eleUtil.waitForElementVisibleAndToBeClickable(savePolicy, AppConstants.DEFAULT_SHORT_TIME_OUT);
+			jsUtil.clickElementByJS(savePolicy);
+			log.info("Clicked on Save Policy");
 			Thread.sleep(4000);
-
-			PolicyNavigationImage.click();
+			
+			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_SHORT_TIME_OUT);
+			jsUtil.clickElementByJS(PolicyNavigationImage);
 			Thread.sleep(1000);
 
 		} catch (Exception e) {
@@ -1551,10 +1565,11 @@ public class CommonLocatorsAndMethod {
 		try {
 			verifySearchedPolicy = seachPolicyAfterLogin(policyNumberSearchData);
 			searchedPolicyData.click();
-			// Thread.sleep(4000);
+			log.info("Clicked on Searched Policy Data");
 
 			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 			PolicyNavigationImage.click();
+			log.info("Clicked on Policy Navigation");
 			Thread.sleep(1000);
 
 		} catch (Exception e) {
@@ -1569,9 +1584,12 @@ public class CommonLocatorsAndMethod {
 			verifySearchedReport = seachReportAfterLogin(reportSearchData);
 			eleUtil.waitForElementVisibleAndToBeClickable(searchedReportData, AppConstants.DEFAULT_LONG_TIME_OUT);
 			searchedReportData.click();
+			log.info("Clicked on Searched Report Data");			
 			Thread.sleep(4000);
+			
 			eleUtil.waitForElementVisibleAndToBeClickable(PolicyNavigationImage, AppConstants.DEFAULT_LONG_TIME_OUT);
 			PolicyNavigationImage.click();
+			log.info("Clicked on Policy Navigation");
 			Thread.sleep(1000);
 
 		} catch (Exception e) {

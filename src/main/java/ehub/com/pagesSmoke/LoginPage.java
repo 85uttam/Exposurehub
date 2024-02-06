@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
+import ehub.com.baseLibrary.BaseClass;
+import ehub.com.constants.AppConstants;
 import ehub.com.utils.ElementUtil;
 import ehub.com.utils.JavaScriptUtil;
 
@@ -54,6 +56,8 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@class='top-header-right']//button[1]")
 	private WebElement userLoginVerify;
 	
+	@FindBy(xpath = "//span[contains(.,'Policy')]")
+	public WebElement HomePage_PolicyLinkButton;
 
 	public String verifyLoginURL() {
 		log.info("Verify URL");
@@ -95,18 +99,24 @@ public class LoginPage {
 	}
 	public void doLogin(String loginUsername, String loginPassword) {
 		try {
+			eleUtil.waitForElementVisibleAndToBeClickable(username, AppConstants.DEFAULT_LONG_TIME_OUT);
 			username.clear();
 			username.sendKeys(loginUsername);
 			log.info("Enter Username : "+loginUsername);
+			BaseClass.logExtentReport("Enter Username : "+loginUsername);
 			
+			eleUtil.waitForElementVisibleAndToBeClickable(password, AppConstants.DEFAULT_LONG_TIME_OUT);
 			password.clear();
 			password.sendKeys(loginPassword);
 			log.info("Enter Password : "+loginPassword);
+			BaseClass.logExtentReport("Enter Password : "+loginPassword);
 			
+			eleUtil.waitForElementToBeClickable(AppConstants.DEFAULT_SHORT_TIME_OUT, login);
 			login.click();
 			log.info("Clicked on Login");
+			BaseClass.logExtentReport("Clicked on Login");
 			
-			Thread.sleep(5000);
+			eleUtil.waitForElementVisibleAndToBeClickable(HomePage_PolicyLinkButton, AppConstants.DEFAULT_LONG_TIME_OUT);
 			
 		} catch (Exception e) {
 			System.out.println("Issue in LoginPage.doLogin "+e);

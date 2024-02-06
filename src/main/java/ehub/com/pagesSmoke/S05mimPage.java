@@ -3,6 +3,7 @@ package ehub.com.pagesSmoke;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import ehub.com.constants.AppConstants;
@@ -18,7 +19,10 @@ public class S05mimPage {
 		PageFactory.initElements(driver, this);
 		common = new CommonLocatorsAndMethod(driver);
 	}
-
+	
+	@FindBy(xpath = "(//div[@col-id='EntityId' and @role='gridcell'])[1]")
+	private WebElement mimSearchedReportPolicyMenuSelectData;
+	
 	public void login() {
 		common.login(AppConstants.username, AppConstants.password);
 	}
@@ -33,10 +37,8 @@ public class S05mimPage {
 			common.PolicyNavigationImage.click();
 			Thread.sleep(5000);
 			
-			WebElement policyData1=driver.findElement(By.xpath("(//div[@col-id='EntityId' and @role='gridcell'])[1]"));
-			Thread.sleep(1000);
-			common.eleUtil.waitForElementVisibleAndToBeClickable(policyData1, AppConstants.DEFAULT_LONG_TIME_OUT);
-			policyData1.click();
+			common.eleUtil.waitForElementVisibleAndToBeClickable(mimSearchedReportPolicyMenuSelectData, AppConstants.DEFAULT_LONG_TIME_OUT);
+			common.jsUtil.clickElementByJS(mimSearchedReportPolicyMenuSelectData);
 			Thread.sleep(8000);
 			
 			driver.navigate().back();
