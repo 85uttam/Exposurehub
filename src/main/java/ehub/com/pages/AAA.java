@@ -5,7 +5,7 @@ public class AAA {
 	public static void main(String[] args) {
 //		System.out.println("dd");
 //		
-////		Excelutility	excUtil=new Excelutility(System.getProperty("user.dir")+PropertyUtility.getProperty("pathofExcelTestData"));
+////		Excelutility	excUtil=new Excelutility(System.getProperty("user.dir")+AppConstants.pathofExcelDataAsPerEnv);
 ////		System.out.println(excUtil.getCellData("policyNumber", "Value", 4));
 ////		System.out.println(excUtil.getCellData("policyNumber", "Value", 5));
 ////		

@@ -1,5 +1,6 @@
 package ehub.com.pagesSmoke;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,7 @@ public class S05mimPage {
 	
 	private WebDriver driver;
 	CommonLocatorsAndMethod common;
+	static Logger log = Logger.getLogger(S05mimPage.class);
 
 	public S05mimPage(WebDriver driver) {
 		this.driver = driver;
@@ -35,13 +37,17 @@ public class S05mimPage {
 		try {
 			common.eleUtil.waitForElementVisibleAndToBeClickable(common.PolicyNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 			common.PolicyNavigationImage.click();
+			log.info("Clicked on Policy Navigation");
 			Thread.sleep(5000);
 			
 			common.eleUtil.waitForElementVisibleAndToBeClickable(mimSearchedReportPolicyMenuSelectData, AppConstants.DEFAULT_LONG_TIME_OUT);
 			common.jsUtil.clickElementByJS(mimSearchedReportPolicyMenuSelectData);
+			log.info("Clicked on Policy Data");
 			Thread.sleep(8000);
 			
+			log.info("Moved to Policy Module");
 			driver.navigate().back();
+			log.info("Moved to Back ");
 			Thread.sleep(5000);
 			
 		} catch (Exception e) {
@@ -52,6 +58,7 @@ public class S05mimPage {
 		try {
 			common.eleUtil.waitForElementVisibleAndToBeClickable(common.resultNavigationImage, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 			common.resultNavigationImage.click();
+			log.info("Clicked on Result Navigation");
 			Thread.sleep(5000);
 			
 			WebElement policyData1=driver.findElement(By.xpath("(//div[@col-id='[RRO].Description' and @role='gridcell'])[1]"));

@@ -26,6 +26,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
+import ehub.com.constants.AppConstants;
 import ehub.com.utils.Excelutility;
 import ehub.com.utils.ExtentManager;
 import ehub.com.utils.PropertyUtility;
@@ -39,7 +40,7 @@ public class BaseClass {
 	public static ExtentReports extent;	
 	
 	static Logger log = Logger.getLogger(BaseClass.class);
-	public static Excelutility excUtil = new Excelutility(System.getProperty("user.dir") + PropertyUtility.getProperty("pathofExcelTestData"));
+	public static Excelutility excUtil = new Excelutility(System.getProperty("user.dir") + AppConstants.pathofExcelDataAsPerEnv);
 	
 	
 	@BeforeSuite
@@ -54,8 +55,8 @@ public class BaseClass {
 	}
 	
 	public void initilization() {
-
-		String browserName = PropertyUtility.getProperty("browserName").trim();
+		String browserName=excUtil.getCellData("basicDetails", "Value", 2).trim();
+		//String browserName = PropertyUtility.getProperty("browserName").trim();
 //		ChromeOptions options = new ChromeOptions();
 //		FirefoxOptions optionsFirefox = new FirefoxOptions();
 //		EdgeOptions optionsEdge = new EdgeOptions();
@@ -84,8 +85,10 @@ public class BaseClass {
 		}
 
 		driver.manage().deleteAllCookies();
-		driver.get(PropertyUtility.getProperty("url"));
-		log.info("Enter URL : "+PropertyUtility.getProperty("url"));
+		String url=excUtil.getCellData("basicDetails", "Value", 3);
+		//driver.get(PropertyUtility.getProperty("url"));
+		driver.get(url);
+		log.info("Enter URL : "+url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
@@ -138,6 +141,21 @@ public class BaseClass {
 		}
 
 		return destFile.toString();
+	}
+	
+	public static String chooseTestDataForFramework() {
+		String excelName = null;
+		Excelutility excUtil = new Excelutility(
+				System.getProperty("user.dir") + PropertyUtility.getProperty("pathofExcelTestData"));
+		String name=excUtil.getCellData("chooseTestDataForFramework", "chooseTestDataForFramework", 2);
+		if(name.equals("Test")) {
+			excelName="\\src\\test\\resources\\testData\\testDataForTestEnvironment.xlsx";
+		}else if(name.equals("Test V2")) {
+			excelName="\\src\\test\\resources\\testData\\testDataForTestV2Environment.xlsx";
+		}else {
+			System.out.println("Kindly pass the right Excel Name");
+		}
+		return excelName;
 	}
 
 	@AfterTest

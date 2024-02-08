@@ -1,0 +1,6 @@
+2024-02-08 14:02:184 INFO  BaseClass:69 - chrome : is launched successfully
+2024-02-08 14:02:113 INFO  BaseClass:91 - Enter URL : https://test-eh.ebixexchange.com/login
+2024-02-08 14:02:554 INFO  BaseClass:98 - login test is Started
+2024-02-08 14:02:235 INFO  LoginPage:94 - Enter Username : suneel.k
+2024-02-08 14:02:753 INFO  LoginPage:100 - Enter Password : ebix@123
+2024-02-08 14:02:984 INFO  LoginPage:105 - Clicked on Login

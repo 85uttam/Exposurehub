@@ -16,7 +16,6 @@ import ehub.com.constants.AppConstants;
 import ehub.com.utils.ElementUtil;
 import ehub.com.utils.Excelutility;
 import ehub.com.utils.JavaScriptUtil;
-import ehub.com.utils.PropertyUtility;
 
 public class CommonLocatorsAndMethod {
 
@@ -33,7 +32,7 @@ public class CommonLocatorsAndMethod {
 		PageFactory.initElements(driver, this);
 		eleUtil = new ElementUtil(driver);
 		jsUtil = new JavaScriptUtil(driver);
-		excUtil = new Excelutility(System.getProperty("user.dir") + PropertyUtility.getProperty("pathofExcelTestData"));
+		excUtil = new Excelutility(System.getProperty("user.dir") + AppConstants.pathofExcelDataAsPerEnv);
 		loginPage = new LoginPage(driver);
 	}
 
@@ -62,7 +61,8 @@ public class CommonLocatorsAndMethod {
 	// (//span[contains(.,'Syndicate')])[2]
 	public WebElement ClickOn_Entity;
 
-	@FindBy(xpath = "(//span[contains(.,'Syndicate')])[3]")
+	@FindBy(xpath = "(//div[@class='cdk-overlay-pane']/div/div/mat-option)[1]")
+	//(//span[contains(.,'Syndicate')])[3]		
 	public WebElement SelectEntity;
 
 	@FindBy(xpath = "//div/mat-select[@id='Class']")

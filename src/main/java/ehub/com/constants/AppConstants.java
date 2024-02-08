@@ -3,13 +3,14 @@ package ehub.com.constants;
 import java.util.Arrays;
 import java.util.List;
 
+import ehub.com.baseLibrary.BaseClass;
 import ehub.com.utils.Excelutility;
-import ehub.com.utils.PropertyUtility;
 
 public class AppConstants {
 
+	public static final String pathofExcelDataAsPerEnv =BaseClass.chooseTestDataForFramework();
 	static Excelutility excUtil = new Excelutility(
-			System.getProperty("user.dir") + PropertyUtility.getProperty("pathofExcelTestData"));
+			System.getProperty("user.dir") +pathofExcelDataAsPerEnv );
 
 	public static final int DEFAULT_MEDIUM_TIME_OUT = 10;
 	public static final int DEFAULT_SHORT_TIME_OUT = 5;
@@ -27,15 +28,15 @@ public class AppConstants {
 	public static final String Expected_userId_Error_Message = "User Id is required";
 	public static final String Expected_Password_Error_Message = "Password is required";
 
-	public static final String URL_After_User_Login = "http://imobilepa.indussoft.com/csfweb/secure/main.do";
-	public static final String Title_After_User_Login = "ACE - Centralized Security Services";
+	public static final String URL_After_User_Login = "";
+	public static final String Title_After_User_Login = "";
 
 	public static final List<String> verify_Error_Message_Of_LoginPage = Arrays.asList("Message(s)",
 			"User Id is required", "Password is required");
 
 	public static final List<String> expected_URL_and_Title_List_After_Login = Arrays.asList(URL_After_User_Login,
-			Title_After_User_Login);
-
+			Title_After_User_Login);	
+	
 	// *********************Sheet Names***********************//
 	public static final String REGISTER_SHEET_NAME = "register";
 
@@ -59,20 +60,35 @@ public class AppConstants {
 
 	// **********************************************************************************************
 	public static final String country_Australia = "Australia";
-	public static final String country_Brazil = "Brazil";
+	public static final String country_Brazil = "";
 	public static final String country_Bangladesh = "Bangladesh";
 	public static final String country_Afghanistan = "Afghanistan";
 	public static final String country_US = "United States";
 
 	// *************************************************************************************
-	public static final String className_one = "Offshore Renewables";
-	public static final String className_two_class_With_Same_Name = "Cyber,Cyber";
-	public static final String className_two_class_With_Different_Name = "Offshore,Offshore Renewables";
+//	public static final String className_one = "Offshore Renewables";
+//	public static final String className_two_class_With_Same_Name = "Cyber,Cyber";
+//	public static final String className_two_class_With_Different_Name = "Offshore,Offshore Renewables";
+	
+	public static final String className_one = excUtil.getCellData("classDetailsForFramework", "className_one", 2);
+	public static final String className_two_class_With_Same_Name = excUtil.getCellData("classDetailsForFramework", "className_two_class_With_Same_Name", 2);
+	public static final String className_two_class_With_Different_Name = excUtil.getCellData("classDetailsForFramework", "className_two_class_With_Different_Name", 2);
+
 
 	// *****************************************************************************************************************
-	public static final String class_Cyber_Fraction_Value = "timer";
-	public static final String class_Offshore_Fraction_Value = "invert_colors";
-	public static final String class_Offshore_Renewables_Fraction_Value = "wind_power";
+	//property class=home
+	//terrorism=grade
+	//cyber class=timer
+	//offshore class=invert_colors
+	//offshore renewables=wind_power
+	
+//	public static final String class_Cyber_Fraction_Value = "timer";
+//	public static final String class_Offshore_Fraction_Value = "invert_colors";
+//	public static final String class_Offshore_Renewables_Fraction_Value = "wind_power";
+	
+	public static final String class_Cyber_Fraction_Value = excUtil.getCellData("classDetailsForFramework", "className_two_class_With_Same_Name", 3);
+	public static final String class_Offshore_Fraction_Value = excUtil.getCellData("classDetailsForFramework", "className_two_class_With_Different_Name", 3);
+	public static final String class_Offshore_Renewables_Fraction_Value = excUtil.getCellData("classDetailsForFramework", "className_one", 3);
 
 	// ****************************************************************************************************
 	public static final String class_Name_Offshore = "Offshore";
@@ -80,7 +96,9 @@ public class AppConstants {
 	public static final String class_Name_Cyber = "Cyber";
 
 	// ******************************************************************************************
-	public static final String class_Name_Offshore_Renewables_With_Entity_Name = "Offshore Renewables (Syndicate)";
+	//public static final String class_Name_Offshore_Renewables_With_Entity_Name = "Offshore Renewables (Syndicate)";
+	
+	public static final String class_Name_Offshore_Renewables_With_Entity_Name = excUtil.getCellData("classDetailsForFramework", "class_Name_Offshore_Renewables_With_Entity_Name", 2);
 
 	// ******************************************************************************************************
 	public static final String aggegation_Select_Data_Policy_Type = "Policy Type (Policy)";

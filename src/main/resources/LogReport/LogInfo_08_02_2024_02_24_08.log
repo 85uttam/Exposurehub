@@ -1,0 +1,7 @@
+2024-02-08 14:02:525 INFO  BaseClass:69 - chrome : is launched successfully
+2024-02-08 14:02:563 INFO  BaseClass:91 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-08 14:02:13 INFO  BaseClass:98 - login test is Started
+2024-02-08 14:02:797 INFO  BaseClass:112 - login test is pass
+2024-02-08 14:02:798 INFO  BaseClass:119 - login - is Finished.
+2024-02-08 14:02:794 INFO  BaseClass:98 - createNewPolicy test is Started
+2024-02-08 14:02:863 INFO  BaseClass:105 - createNewPolicy test is Failedjava.lang.AssertionError: expected [Policy_08022024_S01] but found [null]
