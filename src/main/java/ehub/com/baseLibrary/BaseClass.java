@@ -65,18 +65,22 @@ public class BaseClass {
 //		optionsEdge.addArguments("--remote-allow-origins=*");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			log.info(browserName+" : is launched successfully");
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			log.info(browserName+" : is launched successfully");
 
 		} else if (browserName.equalsIgnoreCase("ie")) {
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 			log.info(browserName+" : is launched successfully");
 
 		} else if (browserName.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			log.info(browserName+" : is launched successfully");
 		} else {
@@ -90,7 +94,7 @@ public class BaseClass {
 		driver.get(url);
 		log.info("Enter URL : "+url);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	@BeforeMethod
