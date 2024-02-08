@@ -3,6 +3,7 @@ package ehub.com.utils;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -186,7 +187,7 @@ public class ElementUtil {
 	 * @return
 	 */
 	public WebElement waitForElementPresence(By locator, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 
 	}
@@ -201,7 +202,7 @@ public class ElementUtil {
 	 * @return
 	 */
 	public WebElement waitForElementVisible(By locator, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 
@@ -215,7 +216,7 @@ public class ElementUtil {
 	 * @return the (same) WebElement once it is visible
 	 */
 	public WebElement waitForElementVisible(WebElement ele, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.visibilityOf(ele));
 	}
 
@@ -228,11 +229,11 @@ public class ElementUtil {
 	 * @param timeOut
 	 * @return
 	 */
-	public List<WebElement> waitForElementsVisible(By locator, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
-	}
-
+	/*
+	 * public List<WebElement> waitForElementsVisible(By locator, int timeOut) {
+	 * WebDriverWait wait = new WebDriverWait(driver, timeOut); return
+	 * wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator)); }
+	 */
 	/**
 	 * An expectation for checking that there is at least one element present on a
 	 * web page.
@@ -242,7 +243,7 @@ public class ElementUtil {
 	 * @return
 	 */
 	public List<WebElement> waitForElementsPresence(By locator, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
 	}
 
@@ -252,7 +253,7 @@ public class ElementUtil {
 	 * @return
 	 */
 	public Alert waitForAlertPresence(int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.alertIsPresent());
 	}
 
@@ -272,53 +273,55 @@ public class ElementUtil {
 		waitForAlertPresence(timeOut).sendKeys(value);
 	}
 
-	public String waitForTitleContainsAndFetch(int timeOut, String titleFractionValue) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-		wait.until(ExpectedConditions.titleContains(titleFractionValue));
-		return driver.getTitle();
-	}
+	/*
+	 * public String waitForTitleContainsAndFetch(int timeOut, String
+	 * titleFractionValue) { WebDriverWait wait = new WebDriverWait(driver,
+	 * Duration.ofSeconds(timeOut));
+	 * wait.until(ExpectedConditions.titleContains(titleFractionValue)); return
+	 * driver.getTitle(); }
+	 */
 
 	public String waitForTitleIsAndFetch(int timeOut, String titleValue) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.titleIs(titleValue));
 		return driver.getTitle();
 	}
 
 	public String waitForURLContainsAndFetch(int timeOut, String urlFractionValue) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.urlContains(urlFractionValue));
 		return driver.getCurrentUrl();
 	}
 
 	public String waitForURLIsAndFetch(int timeOut, String urlValue) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.urlToBe(urlValue));
 		return driver.getCurrentUrl();
 	}
 
 	public boolean waitForURLContains(int timeOut, String urlFractionValue) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.urlContains(urlFractionValue));
 
 	}
 
 	public void waitForFrameAndSwitchToItByIDOrName(int timeOut, String idOrName) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(idOrName));
 	}
 
 	public void waitForFrameAndSwitchToItByIndex(int timeOut, int frameIndex) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameIndex));
 	}
 
 	public void waitForFrameAndSwitchToItByFrameElement(int timeOut, WebElement frameElement) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
 	}
 
 	public void waitForFrameAndSwitchToItByFrameLoctor(int timeOut, By frameLocator) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
 	}
 
@@ -330,17 +333,17 @@ public class ElementUtil {
 	 * @param locator
 	 */
 	public void clickWhenReady(int timeOut, By locator) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
 	}
 
 	public WebElement waitForElementToBeClickable(int timeOut, By locator) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
 	public WebElement waitForElementToBeClickable(int timeOut, WebElement ele) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
 
@@ -378,7 +381,7 @@ public class ElementUtil {
 	}
 
 	public void isClickableWebElement(WebElement ele, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
 
@@ -391,7 +394,7 @@ public class ElementUtil {
 	}
 
 	public void implicitlyWait(int timeOut) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeOut));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	public void clickTab() {
@@ -410,7 +413,7 @@ public class ElementUtil {
 		waitForElementVisible(ele, timeOut);
 		waitForElementToBeClickable(timeOut, ele);
 	}
-	
+
 	public String retryWebElementGetText(WebElement ele, int attemptsCount) {
 		String actual = null;
 		try {

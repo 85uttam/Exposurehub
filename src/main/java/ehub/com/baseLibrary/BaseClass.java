@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -31,6 +31,7 @@ import ehub.com.utils.Excelutility;
 import ehub.com.utils.ExtentManager;
 import ehub.com.utils.PropertyUtility;
 import ehub.com.utils.TestUtility;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class BaseClass {
@@ -65,18 +66,22 @@ public class BaseClass {
 //		optionsEdge.addArguments("--remote-allow-origins=*");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			log.info(browserName+" : is launched successfully");
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			log.info(browserName+" : is launched successfully");
 
 		} else if (browserName.equalsIgnoreCase("ie")) {
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 			log.info(browserName+" : is launched successfully");
 
 		} else if (browserName.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			log.info(browserName+" : is launched successfully");
 		} else {
@@ -90,7 +95,8 @@ public class BaseClass {
 		driver.get(url);
 		log.info("Enter URL : "+url);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
 	
 	@BeforeMethod

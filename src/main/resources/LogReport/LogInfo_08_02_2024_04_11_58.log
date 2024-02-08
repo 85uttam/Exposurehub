@@ -1,0 +1,148 @@
+2024-02-08 16:02:899 INFO  BaseClass:72 - chrome : is launched successfully
+2024-02-08 16:02:806 INFO  BaseClass:97 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-08 16:02:40 INFO  BaseClass:105 - verifyLoginURL test is Started
+2024-02-08 16:02:53 INFO  LoginPage:62 - Verify URL
+2024-02-08 16:02:64 INFO  BaseClass:119 - verifyLoginURL test is pass
+2024-02-08 16:02:65 INFO  BaseClass:126 - verifyLoginURL - is Finished.
+2024-02-08 16:02:358 INFO  BaseClass:105 - verifyLoginPageTitle test is Started
+2024-02-08 16:02:363 INFO  LoginPage:67 - Verify login page Title
+2024-02-08 16:02:374 INFO  BaseClass:119 - verifyLoginPageTitle test is pass
+2024-02-08 16:02:374 INFO  BaseClass:126 - verifyLoginPageTitle - is Finished.
+2024-02-08 16:02:391 INFO  BaseClass:105 - verifyUserIdLabel test is Started
+2024-02-08 16:02:393 INFO  LoginPage:72 - Verify User ID Label
+2024-02-08 16:02:448 INFO  BaseClass:119 - verifyUserIdLabel test is pass
+2024-02-08 16:02:449 INFO  BaseClass:126 - verifyUserIdLabel - is Finished.
+2024-02-08 16:02:473 INFO  BaseClass:105 - verifyPasswordLabel test is Started
+2024-02-08 16:02:475 INFO  LoginPage:77 - Verify Password Label
+2024-02-08 16:02:525 INFO  BaseClass:119 - verifyPasswordLabel test is pass
+2024-02-08 16:02:526 INFO  BaseClass:126 - verifyPasswordLabel - is Finished.
+2024-02-08 16:02:546 INFO  BaseClass:105 - verifyLoginButtonText test is Started
+2024-02-08 16:02:548 INFO  LoginPage:81 - Verify Login Button Text
+2024-02-08 16:02:580 INFO  BaseClass:119 - verifyLoginButtonText test is pass
+2024-02-08 16:02:580 INFO  BaseClass:126 - verifyLoginButtonText - is Finished.
+2024-02-08 16:02:596 INFO  BaseClass:105 - verifyPoweredByText test is Started
+2024-02-08 16:02:598 INFO  LoginPage:85 - Verify Powered By Text
+2024-02-08 16:02:633 INFO  BaseClass:119 - verifyPoweredByText test is pass
+2024-02-08 16:02:634 INFO  BaseClass:126 - verifyPoweredByText - is Finished.
+2024-02-08 16:02:647 INFO  BaseClass:105 - doLogin test is Started
+2024-02-08 16:02:99 INFO  LoginPage:94 - Enter Username : pankaj.yadav
+2024-02-08 16:02:392 INFO  LoginPage:100 - Enter Password : Ebix@123
+2024-02-08 16:02:530 INFO  LoginPage:105 - Clicked on Login
+2024-02-08 16:02:361 INFO  BaseClass:119 - doLogin test is pass
+2024-02-08 16:02:362 INFO  BaseClass:126 - doLogin - is Finished.
+2024-02-08 16:02:372 INFO  BaseClass:105 - verifyUserLogin test is Started
+2024-02-08 16:02:373 INFO  LoginPage:116 - Verify User Login
+2024-02-08 16:02:451 INFO  BaseClass:119 - verifyUserLogin test is pass
+2024-02-08 16:02:452 INFO  BaseClass:126 - verifyUserLogin - is Finished.
+2024-02-08 16:02:331 INFO  BaseClass:72 - chrome : is launched successfully
+2024-02-08 16:02:950 INFO  BaseClass:97 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-08 16:02:611 INFO  BaseClass:105 - login test is Started
+2024-02-08 16:02:289 INFO  LoginPage:94 - Enter Username : pankaj.yadav
+2024-02-08 16:02:599 INFO  LoginPage:100 - Enter Password : Ebix@123
+2024-02-08 16:02:755 INFO  LoginPage:105 - Clicked on Login
+2024-02-08 16:02:227 INFO  BaseClass:119 - login test is pass
+2024-02-08 16:02:227 INFO  BaseClass:126 - login - is Finished.
+2024-02-08 16:02:259 INFO  BaseClass:105 - createNewPolicy test is Started
+2024-02-08 16:02:353 INFO  CommonLocatorsAndMethod:389 - Clicked on Policy
+2024-02-08 16:02:668 INFO  CommonLocatorsAndMethod:394 - Clicked on Add Policy
+2024-02-08 16:02:474 INFO  CommonLocatorsAndMethod:403 - Clicked on Entity Grid
+2024-02-08 16:02:791 INFO  CommonLocatorsAndMethod:408 - Select Entity
+2024-02-08 16:02:18 INFO  CommonLocatorsAndMethod:412 - Clicked on Class Grid
+2024-02-08 16:02:670 INFO  CommonLocatorsAndMethod:424 - Select Class - [[ChromeDriver: chrome on WINDOWS (229cbf5b49718a6f74532ec778bab4cf)] -> xpath: //span[text()=' Offshore ']]
+2024-02-08 16:02:395 INFO  CommonLocatorsAndMethod:424 - Select Class - [[ChromeDriver: chrome on WINDOWS (229cbf5b49718a6f74532ec778bab4cf)] -> xpath: //span[text()=' Offshore Renewables ']]
+2024-02-08 16:02:340 INFO  CommonLocatorsAndMethod:433 - Clicked on Perils Grid
+2024-02-08 16:02:747 INFO  CommonLocatorsAndMethod:440 - Enter Policy Reference : Policy_08022024_S01
+2024-02-08 16:02:174 INFO  CommonLocatorsAndMethod:445 - Enter Assured : Assured_S01
+2024-02-08 16:02:228 INFO  CommonLocatorsAndMethod:448 - Scroll till other field text
+2024-02-08 16:02:978 INFO  CommonLocatorsAndMethod:453 - Clicked on Other Field
+2024-02-08 16:02:798 INFO  CommonLocatorsAndMethod:460 - Clicked on Save
+2024-02-08 16:02:54 INFO  CommonLocatorsAndMethod:465 - Clicked on Policy Navigation Link
+2024-02-08 16:02:610 INFO  CommonLocatorsAndMethod:471 - Verify created Policy
+2024-02-08 16:02:616 INFO  BaseClass:119 - createNewPolicy test is pass
+2024-02-08 16:02:617 INFO  BaseClass:126 - createNewPolicy - is Finished.
+2024-02-08 16:02:672 INFO  BaseClass:105 - addNewLimitGroup test is Started
+2024-02-08 16:02:48 INFO  CommonLocatorsAndMethod:726 - Clicked on Terms Navigation
+2024-02-08 16:02:987 INFO  CommonLocatorsAndMethod:731 - Clicked on Terms Edit
+2024-02-08 16:02:634 INFO  CommonLocatorsAndMethod:736 - Clicked on Add Limit Group
+2024-02-08 16:02:410 INFO  CommonLocatorsAndMethod:742 - Enter Limit Group Name : GNPolicyS01
+2024-02-08 16:02:608 INFO  CommonLocatorsAndMethod:747 - Clicked on Add Rule Limit Group
+2024-02-08 16:02:811 INFO  CommonLocatorsAndMethod:753 - Clicked on Country Name
+2024-02-08 16:02:181 INFO  CommonLocatorsAndMethod:756 - Enter Country Name : Australia
+2024-02-08 16:02:433 INFO  CommonLocatorsAndMethod:761 - Clicked on Preview Group
+2024-02-08 16:02:703 INFO  CommonLocatorsAndMethod:766 - Clicked on Save Group
+2024-02-08 16:02:524 INFO  CommonLocatorsAndMethod:771 - Clicked on Save Terms
+2024-02-08 16:02:982 INFO  CommonLocatorsAndMethod:784 - Verify created Group Name
+2024-02-08 16:02:992 INFO  BaseClass:119 - addNewLimitGroup test is pass
+2024-02-08 16:02:993 INFO  BaseClass:126 - addNewLimitGroup - is Finished.
+2024-02-08 16:02:52 INFO  BaseClass:105 - addNewLimit test is Started
+2024-02-08 16:02:335 INFO  CommonLocatorsAndMethod:867 - Clicked on Edit Terms
+2024-02-08 16:02:906 INFO  CommonLocatorsAndMethod:874 - Clicked on Add New Limit
+2024-02-08 16:02:268 INFO  CommonLocatorsAndMethod:885 - Clicked on Save Terms
+2024-02-08 16:02:694 INFO  BaseClass:119 - addNewLimit test is pass
+2024-02-08 16:02:694 INFO  BaseClass:126 - addNewLimit - is Finished.
+2024-02-08 16:02:702 INFO  BaseClass:105 - addCyberSchedule test is Started
+2024-02-08 16:02:210 INFO  CommonLocatorsAndMethod:1065 - Clicked on Class Navigation
+2024-02-08 16:02:88 INFO  CommonLocatorsAndMethod:1074 - Clicked on Edit Schedule
+2024-02-08 16:02:572 INFO  CommonLocatorsAndMethod:1079 - Clicked on Add Bulk Schedule
+2024-02-08 16:02:343 INFO  CommonLocatorsAndMethod:1088 - Enter Country Name : Australia
+2024-02-08 16:02:613 INFO  CommonLocatorsAndMethod:1099 - Select Data 1
+2024-02-08 16:02:756 INFO  CommonLocatorsAndMethod:1106 - Select Data 2
+2024-02-08 16:02:116 INFO  CommonLocatorsAndMethod:1111 - Clicked on Apply (Schedule)
+2024-02-08 16:02:271 INFO  CommonLocatorsAndMethod:1115 - Clicked on Close (Schedule)
+2024-02-08 16:02:666 INFO  CommonLocatorsAndMethod:1118 - Clicked on Save (Schedule)
+2024-02-08 16:02:325 INFO  CommonLocatorsAndMethod:1128 - Clicked on Edit Schedule Again
+2024-02-08 16:02:782 INFO  CommonLocatorsAndMethod:1143 - Clicked on Save Schedule
+2024-02-08 16:02:254 INFO  CommonLocatorsAndMethod:1152 - Clicked on Policy Navigation
+2024-02-08 16:02:273 INFO  BaseClass:119 - addCyberSchedule test is pass
+2024-02-08 16:02:274 INFO  BaseClass:126 - addCyberSchedule - is Finished.
+2024-02-08 16:02:312 INFO  BaseClass:105 - addOffshoreSchedule test is Started
+2024-02-08 16:02:485 INFO  CommonLocatorsAndMethod:1065 - Clicked on Class Navigation
+2024-02-08 16:02:845 INFO  CommonLocatorsAndMethod:1074 - Clicked on Edit Schedule
+2024-02-08 16:02:334 INFO  CommonLocatorsAndMethod:1079 - Clicked on Add Bulk Schedule
+2024-02-08 16:02:654 INFO  CommonLocatorsAndMethod:1088 - Enter Country Name : Bangladesh
+2024-02-08 16:02:964 INFO  CommonLocatorsAndMethod:1099 - Select Data 1
+2024-02-08 16:02:152 INFO  CommonLocatorsAndMethod:1106 - Select Data 2
+2024-02-08 16:02:575 INFO  CommonLocatorsAndMethod:1111 - Clicked on Apply (Schedule)
+2024-02-08 16:02:29 INFO  CommonLocatorsAndMethod:1115 - Clicked on Close (Schedule)
+2024-02-08 16:02:351 INFO  CommonLocatorsAndMethod:1118 - Clicked on Save (Schedule)
+2024-02-08 16:02:14 INFO  CommonLocatorsAndMethod:1128 - Clicked on Edit Schedule Again
+2024-02-08 16:02:449 INFO  CommonLocatorsAndMethod:1143 - Clicked on Save Schedule
+2024-02-08 16:02:928 INFO  CommonLocatorsAndMethod:1152 - Clicked on Policy Navigation
+2024-02-08 16:02:939 INFO  BaseClass:119 - addOffshoreSchedule test is pass
+2024-02-08 16:02:939 INFO  BaseClass:126 - addOffshoreSchedule - is Finished.
+2024-02-08 16:02:968 INFO  BaseClass:105 - addOffshoreRenewablesSchedule test is Started
+2024-02-08 16:02:222 INFO  CommonLocatorsAndMethod:1065 - Clicked on Class Navigation
+2024-02-08 16:02:483 INFO  CommonLocatorsAndMethod:1074 - Clicked on Edit Schedule
+2024-02-08 16:02:957 INFO  CommonLocatorsAndMethod:1079 - Clicked on Add Bulk Schedule
+2024-02-08 16:02:971 INFO  CommonLocatorsAndMethod:1088 - Enter Country Name : 
+2024-02-08 16:02:353 INFO  CommonLocatorsAndMethod:1099 - Select Data 1
+2024-02-08 16:02:538 INFO  CommonLocatorsAndMethod:1106 - Select Data 2
+2024-02-08 16:02:947 INFO  CommonLocatorsAndMethod:1111 - Clicked on Apply (Schedule)
+2024-02-08 16:02:643 INFO  CommonLocatorsAndMethod:1115 - Clicked on Close (Schedule)
+2024-02-08 16:02:08 INFO  CommonLocatorsAndMethod:1118 - Clicked on Save (Schedule)
+2024-02-08 16:02:715 INFO  CommonLocatorsAndMethod:1128 - Clicked on Edit Schedule Again
+2024-02-08 16:02:169 INFO  CommonLocatorsAndMethod:1143 - Clicked on Save Schedule
+2024-02-08 16:02:659 INFO  CommonLocatorsAndMethod:1152 - Clicked on Policy Navigation
+2024-02-08 16:02:664 INFO  BaseClass:119 - addOffshoreRenewablesSchedule test is pass
+2024-02-08 16:02:666 INFO  BaseClass:126 - addOffshoreRenewablesSchedule - is Finished.
+2024-02-08 16:02:217 INFO  BaseClass:72 - chrome : is launched successfully
+2024-02-08 16:02:257 INFO  BaseClass:97 - Enter URL : https://test-v2-eh.ebixexchange.com/login
+2024-02-08 16:02:499 INFO  BaseClass:105 - login test is Started
+2024-02-08 16:02:183 INFO  LoginPage:94 - Enter Username : pankaj.yadav
+2024-02-08 16:02:679 INFO  LoginPage:100 - Enter Password : Ebix@123
+2024-02-08 16:02:866 INFO  LoginPage:105 - Clicked on Login
+2024-02-08 16:02:45 INFO  BaseClass:119 - login test is pass
+2024-02-08 16:02:45 INFO  BaseClass:126 - login - is Finished.
+2024-02-08 16:02:71 INFO  BaseClass:105 - searchPolicy test is Started
+2024-02-08 16:02:256 INFO  CommonLocatorsAndMethod:1391 - Clicked on Policy Link from Home Page
+2024-02-08 16:02:775 INFO  CommonLocatorsAndMethod:1400 - Clicked on Search Input Box
+2024-02-08 16:02:564 INFO  CommonLocatorsAndMethod:1405 - Enter Policy Number : Policy_08022024_S01
+2024-02-08 16:02:824 INFO  BaseClass:112 - searchPolicy test is Failedjava.lang.AssertionError: expected [Policy_08022024_S01] but found [null]
+2024-02-08 16:02:955 INFO  BaseClass:126 - searchPolicy - is Finished.
+2024-02-08 16:02:987 INFO  BaseClass:105 - editPolicyDetails test is Started
+2024-02-08 16:02:201 INFO  BaseClass:112 - editPolicyDetails test is Failedjava.lang.AssertionError: expected [Policy_08022024_S01update] but found [null]
+2024-02-08 16:02:352 INFO  BaseClass:126 - editPolicyDetails - is Finished.
+2024-02-08 16:02:377 INFO  BaseClass:105 - editLimitGroup test is Started
+2024-02-08 16:02:598 INFO  BaseClass:112 - editLimitGroup test is Failedjava.lang.AssertionError: expected [GNPolicyS01update] but found [null]
+2024-02-08 16:02:724 INFO  BaseClass:126 - editLimitGroup - is Finished.
+2024-02-08 16:02:759 INFO  BaseClass:105 - copyAndCreateNewLimitGroup test is Started

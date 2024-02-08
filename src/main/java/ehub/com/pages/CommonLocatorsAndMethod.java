@@ -2,6 +2,7 @@ package ehub.com.pages;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -2729,7 +2730,7 @@ public class CommonLocatorsAndMethod {
 			log.info("Clicked on Confirmation - Yes");
 			//Thread.sleep(10000);
 
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 			WebElement scheduleNavigationImage2 = driver.findElement(
 					By.xpath("(//span[@class='material-icons'][contains(.,'" + classNameXpath + "')])[1]"));
