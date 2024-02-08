@@ -100,7 +100,7 @@ public class ExtentReportListener implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		test.get().fail(result.getThrowable());
 		test.get().fail(result.getMethod().getMethodName() + " failed");
-		test.get().fail(result.getThrowable(),
+		
 		try {
 			test.get().fail(result.getThrowable(),
 			MediaEntityBuilder.createScreenCaptureFromPath(BaseClass.getScreenShots(methodName+"copy")).build());
