@@ -43,7 +43,7 @@ public class BaseClass {
 	static Logger log = Logger.getLogger(BaseClass.class);
 	public static Excelutility excUtil = new Excelutility(System.getProperty("user.dir") + AppConstants.pathofExcelDataAsPerEnv);
 	
-	
+	//Before Method
 	@BeforeSuite
 	public void beforeSuite() {
 		extent = ExtentManager.getInstance();
